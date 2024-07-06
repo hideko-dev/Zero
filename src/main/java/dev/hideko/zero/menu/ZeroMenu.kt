@@ -39,8 +39,8 @@ class ZeroMenu private constructor(private val size: Int, private val title: Str
         if (event.clickedInventory == inventory) {
             if (!ignoredSlots.contains(event.slot)) {
                 event.isCancelled = true
-                slotActions[event.slot]?.invoke(ZeroInventory(event.whoClicked as Player))
             }
+            slotActions[event.slot]?.invoke(ZeroInventory(event.whoClicked as Player))
         }
     }
 
