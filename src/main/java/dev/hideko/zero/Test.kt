@@ -20,10 +20,10 @@ class Test: JavaPlugin() {
             .setTitle("Hello World")
             .inventory {
                 set(0, ItemStack(Material.GRASS)) { event ->
-                    event.player.sendMessage("You Clicked!!")
+                    event.getPlayer().sendMessage("You Clicked!!")
                 }
                 set(1, ItemStack(Material.WOOD)) { event ->
-                    event.player.sendMessage("You Clicked!!")
+                    event.getPlayer().sendMessage("You Clicked!!")
                 }
             }
             .ignore(0)
