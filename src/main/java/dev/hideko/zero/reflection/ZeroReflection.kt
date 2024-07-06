@@ -1,4 +1,4 @@
-package dev.hideko.zero.utility
+package dev.hideko.zero.reflection
 
 import org.bukkit.Bukkit
 import org.bukkit.entity.Player

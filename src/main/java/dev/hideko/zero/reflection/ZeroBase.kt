@@ -1,4 +1,4 @@
-package dev.hideko.zero.utility
+package dev.hideko.zero.reflection
 
 import org.bukkit.command.CommandExecutor
 import org.bukkit.event.Listener

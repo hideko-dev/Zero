@@ -1,8 +1,7 @@
 package dev.hideko.zero.text
 
-import dev.hideko.zero.utility.ZeroReflection
-import dev.hideko.zero.utility.ZeroReflection.Companion.sendPacket
-import org.bukkit.Bukkit
+import dev.hideko.zero.reflection.ZeroReflection
+import dev.hideko.zero.reflection.ZeroReflection.Companion.sendPacket
 import org.bukkit.entity.Player
 import java.lang.reflect.Method
 

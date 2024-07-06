@@ -1,7 +1,7 @@
 package dev.hideko.zero.text
 
-import dev.hideko.zero.utility.ZeroReflection.Companion.getNMSClass
-import dev.hideko.zero.utility.ZeroReflection.Companion.sendPacket
+import dev.hideko.zero.reflection.ZeroReflection.Companion.getNMSClass
+import dev.hideko.zero.reflection.ZeroReflection.Companion.sendPacket
 import org.bukkit.entity.Player
 import java.lang.reflect.Constructor
 

@@ -3,6 +3,7 @@ package dev.hideko.zero
 import dev.hideko.zero.Zero
 import dev.hideko.zero.menu.ZeroMenu
 import dev.hideko.zero.text.ZeroActionBar
+import dev.hideko.zero.text.ZeroBossBar
 import dev.hideko.zero.text.ZeroTitle
 import org.bukkit.Material
 import org.bukkit.entity.Player
