@@ -8,6 +8,7 @@ import org.bukkit.inventory.ItemStack
 
 class ZeroMenu private constructor(private val size: Int) {
 
+
     private val inventory: Inventory = Bukkit.createInventory(null, size)
     private val slotActions: MutableMap<Int, (ZeroInventory) -> Unit> = mutableMapOf()
     private val ignoredSlots: MutableSet<Int> = mutableSetOf()
@@ -42,9 +43,11 @@ class ZeroMenu private constructor(private val size: Int) {
     }
 
     fun handleInventoryClick(event: InventoryClickEvent) {
-        if (event.clickedInventory == inventory && !ignoredSlots.contains(event.slot)) {
-            event.isCancelled = true
-            slotActions[event.slot]?.invoke(ZeroInventory(event.whoClicked as Player))
+        if (event.clickedInventory == inventory) {
+            if (!ignoredSlots.contains(event.slot)) {
+                event.isCancelled = true
+                slotActions[event.slot]?.invoke(ZeroInventory(event.whoClicked as Player))
+            }
         }
     }
 
