@@ -6,21 +6,14 @@ import org.bukkit.event.inventory.InventoryClickEvent
 import org.bukkit.inventory.Inventory
 import org.bukkit.inventory.ItemStack
 
-class ZeroMenu private constructor(private val size: Int) {
+class ZeroMenu private constructor(private val size: Int, private val title: String) {
 
-
-    private val inventory: Inventory = Bukkit.createInventory(null, size)
+    private val inventory: Inventory = Bukkit.createInventory(null, size, title)
     private val slotActions: MutableMap<Int, (ZeroInventory) -> Unit> = mutableMapOf()
     private val ignoredSlots: MutableSet<Int> = mutableSetOf()
-    private var title: String = ""
 
     init {
         ZeroMenuHolder[inventory] = this
-    }
-
-    fun setTitle(title: String): ZeroMenu {
-        this.title = title
-        return this
     }
 
     fun inventory(configure: ZeroMenu.() -> Unit): ZeroMenu {
@@ -52,8 +45,8 @@ class ZeroMenu private constructor(private val size: Int) {
     }
 
     companion object {
-        fun create(size: Int): ZeroMenu {
-            return ZeroMenu(size)
+        fun create(size: Int, title: String): ZeroMenu {
+            return ZeroMenu(size, title)
         }
     }
 }

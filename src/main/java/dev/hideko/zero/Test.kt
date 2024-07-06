@@ -16,8 +16,7 @@ class Test: JavaPlugin() {
     }
 
     fun openMenu(ply: Player) {
-        ZeroMenu.create(9)
-            .setTitle("Hello World")
+        ZeroMenu.create(9, "Hello World")
             .inventory {
                 set(0, ItemStack(Material.GRASS)) { event ->
                     event.getPlayer().sendMessage("You Clicked!!")
